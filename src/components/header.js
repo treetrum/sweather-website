@@ -1,42 +1,35 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
+import Container from "./shared/Container";
+import styled from "styled-components";
+import { breakpoint } from "../constants";
+import Menu from "./Menu";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Nav = styled.div`
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid black;
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+    h2 {
+        margin: 0 0 24px;
+    }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+    @media (min-width: ${breakpoint}) {
+        h2 {
+            margin: 0;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+`;
 
-export default Header
+const Header = () => (
+    <Nav>
+        <h2>Sweather 2</h2>
+        <Menu></Menu>
+    </Nav>
+);
+
+export default Header;
