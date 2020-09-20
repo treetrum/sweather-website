@@ -44,7 +44,7 @@ const Menu = () => (
                 <Link to="/privacy">Privacy Policy</Link>
             </li>
             <li>
-                <Link to="/terms">Terms & Conditions</Link>
+                <Link to="/terms">Terms of Use</Link>
             </li>
         </ul>
     </Main>
