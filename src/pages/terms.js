@@ -6,8 +6,8 @@ import SEO from "../components/seo";
 
 const IndexPage = () => (
     <Layout>
-        <SEO title="Terms & Conditions" />
-        <h1>Terms & Conditions</h1>
+        <SEO title="Terms of Use" />
+        <h1>Terms of Use</h1>
         <p>
             By downloading or using the app, these terms will automatically
             apply to you – you should make sure therefore that you read them
